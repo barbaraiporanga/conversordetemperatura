@@ -34,10 +34,10 @@ jobs:
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
 
       - name: Build Docker image
-        run: docker build -t jesseixas/repoatvdevops:latest .
+        run: docker build -t barbarasilva/conversor:latest .
 
       - name: Push Docker image
-        run: docker push jesseixas/repoatvdevops:latest
+        run: docker push barbarasilva/conversor:latest
 
       - name: Send notification
         if: github.event_name == 'pull_request' || github.event_name == 'push'
